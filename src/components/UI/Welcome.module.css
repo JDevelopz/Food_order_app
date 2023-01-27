@@ -1,0 +1,118 @@
+.welcome {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.foot {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 20vh;
+  background-color: #8a2b06;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 100%;
+  z-index: 20;
+}
+
+.welcomeDiv {
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.welcome h1 {
+  font-size: 78px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .welcome h1 {
+    font-size: 42px;
+  }
+}
+.welcome p {
+  font-size: 22px;
+}
+.welcome button {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: rgb(255, 247, 19);
+  box-shadow: 5px 5px 5px 0px black;
+  border: none;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+}
+.welcome button:hover {
+  box-shadow: 2px 2px 2px 0px black;
+  top: 5px;
+  left: 2px;
+}
+
+.sushiegg {
+  position: absolute;
+  z-index: 1000;
+  left: 100px;
+  bottom: 110px;
+  width: 180px;
+  height: auto;
+  animation-duration: 5s;
+  animation-delay: 2s;
+}
+@media screen and (max-width: 768px) {
+  .sushiegg {
+    left: 20px;
+    width: 120px;
+  }
+}
+
+@keyframes walk {
+  0% {
+    bottom: 10px;
+    right: 0px;
+  }
+  100% {
+    bottom: 100px;
+    right: 300px;
+  }
+}
+
+.sushikik {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  width: 400px;
+  height: auto;
+  animation-name: walk;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width: 768px) {
+  .sushikik {
+    right: 0;
+    bottom: 100px;
+    width: 200px;
+    animation: none;
+  }
+}
+
+.sushiside {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  top: -70px;
+  width: 300px;
+  height: auto;
+  animation-duration: 5s;
+  animation-delay: 2s;
+}
