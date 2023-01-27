@@ -11,32 +11,32 @@ const HeaderCartBtn = (props) => {
     return current + item.amount;
   }, 0);
 
-  const btnAnimationClasses = `${classes.button} ${btnIsHighlight ? classes.bump : " "}`;
-
+  const btnAnimationClasses = `${classes.button} ${
+    btnIsHighlight ? classes.bump : " "
+  }`;
 
   useEffect(() => {
     const indentifier = setTimeout(() => {
-      console.log('Checking item added');
-      if(cartContext.items.length > 0) {
+      console.log("Checking item added");
+      if (cartContext.items.length > 0) {
         setBtnIsHighlight(true);
       }
     }, 100);
 
     return () => {
-      console.log('clean-up');
+      console.log("clean-up");
       clearTimeout(indentifier);
       setBtnIsHighlight(false);
-    }
-
-  },[cartContext.items]); 
+    };
+  }, [cartContext.items]);
 
   return (
     <button className={btnAnimationClasses} onClick={props.setCartStatus}>
       <span className={classes.icon}>
         <CartIcon />
       </span>
-      <span>Your Cart</span>
-        <span className={classes.badge}>{numberOfCartItems}</span>
+      <span className={classes.hidden}>Your Cart</span>
+      <span className={classes.badge}>{numberOfCartItems}</span>
     </button>
   );
 };
