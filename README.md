@@ -2,10 +2,12 @@
 Food order application made with React.js
 
 
-Introduction:
+<h2>Introduction:</h2>
+<br>
 The Food Order App is a web-based application that allows users to order food online. The app offers a convenient and efficient way for users to order food from local restaurants and food establishments.
 
-Design:
+<h2>Design:<h2>
+<br>
 The design of the Food Order App is clean, simple, and user-friendly. The website uses a color scheme of white, green, and orange, which creates a warm and inviting atmosphere. The layout is well-organized and easy to navigate, making it easy for users to find what they are looking for.
 
 Functionality:
